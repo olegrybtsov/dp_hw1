@@ -62,7 +62,7 @@ pipeline {
                         returnStdout: true
                     ).trim().split("\"")[1]  
                     
-                    sleep 7
+                    sleep 20
                 }
             }
         }
