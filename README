@@ -6,10 +6,10 @@ This is the example of deploy simple node js app
 
 4. Install Jenkins:
 5. Config SMTP.
-6. Add AWS private key in Credentials block - SSH Username "ubuntu" with private key.
-7. Add Jenkins item using pipline file. 
-8.1. Modify KEY_PAIR value - your key pair name in AWS.
-8.2. Modify MAIL_TO value - your email.
-8.3. Add creds from the previous point as parameter named "USER_KEY" to the Build.
+6. Add SSH key in Credentials block - SSH Username "ubuntu" with private key.
+7. Add Jenkins item using pipline from SCM. Add Parameters to the build:
+7.1. USER_KEY - creds from point 6.
+7.2. KEY_PAIR - key pair name in AWS from point 6.
+7.3. MAIL_TO value - your email.
 
-* if you have EC2 instance in Terminated state, U should delete its Tag named "unique_id"
+* if you have EC2 instance in Terminated state, U should delete its Tag named "unique_id" first.
