@@ -80,7 +80,7 @@ pipeline {
         
         stage ('Notify') {
             steps{
-                mail body: "http://$DNS:3000", subject: 'Build URL', to: $MAIL_TO    
+                mail body: "http://$DNS:3000", subject: 'Jenkins Build URL', to: "$MAIL_TO"
             }
         }
     }    
