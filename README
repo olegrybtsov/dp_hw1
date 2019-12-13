@@ -3,7 +3,11 @@ This is the example of deploy simple node js app
 1. Install and config git.
 2. Install and config aws cli.
 3. Install npm.
-4. Add Jenkins item using pipline file. Modify KEY_PAIR value - your key pair name in AWS.
-5. Add AWS private key in Credentials block - SSH Username "ubuntu" with private key (from previous point) and add it as parameter named "USER_KEY" to the Build.
+4. Config SMTP.
+5. Add AWS private key in Credentials block - SSH Username "ubuntu" with private key.
+6. Add Jenkins item using pipline file. 
+6.1. Modify KEY_PAIR value - your key pair name in AWS.
+6.2. Modify MAIL_TO value - your email.
+6.3. Add creds from the previous point as parameter named "USER_KEY" to the Build.
 
 * if you have EC2 instance in Terminated state, U should delete its Tag named "unique_id"
