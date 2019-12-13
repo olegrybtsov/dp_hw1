@@ -1,10 +1,7 @@
 pipeline {
     agent any
 
-    environment {        
-        KEY_PAIR = 'devops'                 //set AWS ssh key pair name
-        MAIL_TO = 'oleg.rybtsov@gmail.com'  //set your e-mail
-        
+    environment {                
         SEC_GR = 'nodejs_for_lab'
         EC2_TAG = 'unique_tag_for_lab'
         AMI = 'ami-0cc0a36f626a4fdf5'
