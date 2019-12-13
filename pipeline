@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {        
-        KEY_PAIR = 'devops'     //set AWS ssh key pair name
+        KEY_PAIR = 'devops'                 //set AWS ssh key pair name
+        MAIL_TO = 'oleg.rybtsov@gmail.com'  //set your e-mail
         
         SEC_GR = 'nodejs_for_lab'
         EC2_TAG = 'unique_tag_for_lab'
@@ -79,7 +80,7 @@ pipeline {
         
         stage ('Notify') {
             steps{
-                mail body: "http://$DNS:3000", subject: 'Build URL', to: 'oleg.rybtsov@gmail.com'    
+                mail body: "http://$DNS:3000", subject: 'Build URL', to: $MAIL_TO    
             }
         }
     }    
