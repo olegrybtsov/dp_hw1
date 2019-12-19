@@ -1,0 +1,5 @@
+- tasks:
+    - name: Get facts
+      setup:
+        gather_subset:
+          - all

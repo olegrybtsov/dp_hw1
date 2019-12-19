@@ -1,0 +1,7 @@
+- hosts: lab
+  tasks:
+  - name: Install basic utils
+    - include: centos-setup.yml
+      when: ansible_distribution == "CentOS"
+    - include: ubuntu-setup.yml
+      when: ansible_distribution == "Ubuntu"
