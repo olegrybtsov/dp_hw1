@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - name: get facts
+      setup:
+  roles:
+    - common

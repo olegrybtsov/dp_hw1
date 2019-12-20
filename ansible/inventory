@@ -1,3 +1,9 @@
 all:
   hosts:
-    test1 ansible_ssh_host=ec2-18-184-129-201.eu-central-1.compute.amazonaws.com ansible_ssh_user=ubuntu
+    test1:
+       ansible_ssh_host: 127.0.0.1
+       ansible_ssh_user: ubuntu
+  children:
+    linux:
+      hosts:
+        test1:
